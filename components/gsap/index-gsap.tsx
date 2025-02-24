@@ -3,8 +3,7 @@ import { useRef } from "react";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
-gsap.registerPlugin(useGSAP);
+import { EventClicks } from "./eventClicks";
 
 export const IndexGsap = () => {
   const container = useRef(null);
@@ -37,6 +36,7 @@ export const IndexGsap = () => {
       <div ref={container} className="p-20">
         <div className="box text-xl">Hello</div>
         <div className="mt-20 w-20 h-20 bg-green-400 rounded-2xl greenBox hidden"></div>
+        <EventClicks />
       </div>
     </div>
   );
